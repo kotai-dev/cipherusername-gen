@@ -4,7 +4,7 @@ lightweight, zero-dependency Go CLI utility designed to blind usernames for onli
 
 ## Mechanism
 
-- **Stream Cipher Design (AES-256-CTR with random nonce)**
+- **Adaptive Stream Cipher Design (AES-CTR with random nonce)**: Automatically detects and adapts to the injected key length, supporting **AES-128-CTR**, **AES-192-CTR**, and **AES-256-CTR**
 - **Decoupled Key Management**
 - **Anti-Replay Defense**: Utilizes `crypto/rand` to inject a unique 16-byte nonce header into every encryption cycle, blocking statistical correlation attacks
 
